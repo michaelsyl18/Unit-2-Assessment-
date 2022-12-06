@@ -35,6 +35,17 @@ const cart = [
 
 //CODE HERE
 
+const initalPrice = 0;
+const summedPrice = cart.reduce(
+    function(accumulator, currentValue) {
+        return accumulator + currentValue.price
+    },
+    initalPrice
+
+);
+
+console.log(summedPrice)
+
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
@@ -55,7 +66,13 @@ const cart = [
 
 //CODE HERE
 
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    let finalTotal = cartTotal * tax + cartTotal
+    finalTotal -= couponValue
+    return finalTotal
+}
 
+console.log(calcFinalPrice(8, 2, .08))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,6 +97,12 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    Name: (String) Having the customers information for me to be able to address that customer formally
+    Address: (String) I am able to mail the customer coupons to them having the address information.
+    Phone number: I am able to contact the customer for any additional information about coupons as well as being able to provide coustomer service. 
+    Email: Providing coupons via email for customers. 
+
+
 */
 
 /*
@@ -88,3 +111,11 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    name: "Michael",
+    address: "2110 Research row",
+    Email: "m.sylvester18@icloud.com",
+    phone: 9722221707,
+
+}
